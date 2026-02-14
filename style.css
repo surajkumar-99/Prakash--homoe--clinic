@@ -1,0 +1,313 @@
+/* Basic & Header */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1f8f4;
+}
+
+.header {
+  background: linear-gradient(135deg, #1b5e20, #66bb6a);
+  color: white;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  margin: 12px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.slides {
+  display: none;
+}
+
+.slides.active {
+  display: block;
+}
+
+.slides img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  filter: brightness(0.65);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sections */
+section {
+  background: white;
+  margin: 14px;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Doctor */
+#doctor {
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+}
+
+#doctor h2 {
+  text-align: center;
+  color: #1b5e20;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+.doctor-card {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.doctor-card img {
+  width: 230px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-info {
+  flex: 1;
+  min-width: 260px;
+}
+
+.doctor-info h3 {
+  color: #1b5e20;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.doctor-info h4 {
+  margin-top: 15px;
+  color: #2e7d32;
+  font-size: 18px;
+}
+
+.doctor-info p {
+  line-height: 1.6;
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.doctor-info hr {
+  border: none;
+  height: 1px;
+  background: #c8e6c9;
+  margin: 12px 0;
+}
+
+/* Locations */
+.location-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.location-card {
+  width: 300px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-bottom: 15px;
+  transition: 0.4s;
+}
+
+.location-card:hover {
+  transform: translateY(-8px);
+}
+
+.location-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.location-name {
+  color: #1b5e20;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.map-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: white;
+  padding: 7px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* Contact */
+.contact-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.contact-btn {
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.call-btn {
+  background: #1b5e20;
+}
+
+.call-btn:hover {
+  background: #2e7d32;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+/* Button */
+.btn {
+  background: linear-gradient(135deg, #1b5e20, #66bb6a);
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Appointment */
+.appointment-section {
+  padding: 40px 20px;
+  background: #fff;
+  max-width: 500px;
+  margin: 40px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.appointment-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.appointment-section input,
+.appointment-section select {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.appointment-section input:focus,
+.appointment-section select:focus {
+  border-color: #2e7d32;
+  outline: none;
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.4);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 14px;
+  background: #1b5e20;
+  color: white;
+}
+
+/* Mobile */
+@media(max-width:768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #1b5e20;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 12px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .doctor-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .doctor-card img {
+    margin: auto;
+  }
+
+  .location-card {
+    width: 100%;
+  }
+}

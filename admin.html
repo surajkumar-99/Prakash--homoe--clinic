@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel - Prakash Homeo Clinic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section>
+  <h2>📋 All Bookings</h2>
+  <div id="bookingList"></div>
+</section>
+
+<script>
+  let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+  let list = document.getElementById("bookingList");
+
+  if(bookings.length === 0){
+    list.innerHTML = "<p>No bookings yet.</p>";
+  } else {
+    bookings.forEach(b => {
+      list.innerHTML += `
+        <div style="border:1px solid #ccc; padding:10px; margin:10px 0;">
+          <strong>Token:</strong> ${b.token}<br>
+          <strong>Name:</strong> ${b.name}<br>
+          <strong>Date:</strong> ${b.date}<br>
+          <strong>Slot:</strong> ${b.slot}<br>
+          <strong>Payment ID:</strong> ${b.paymentId}
+        </div>
+      `;
+    });
+  }
+</script>
+
+</body>
+</html>
